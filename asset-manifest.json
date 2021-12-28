@@ -1,7 +1,7 @@
 {
   "main.css": "/fast-question-game/static/css/main.b2d4063a.chunk.css",
-  "main.js": "/fast-question-game/static/js/main.e1dde93b.chunk.js",
-  "main.js.map": "/fast-question-game/static/js/main.e1dde93b.chunk.js.map",
+  "main.js": "/fast-question-game/static/js/main.366841c8.chunk.js",
+  "main.js.map": "/fast-question-game/static/js/main.366841c8.chunk.js.map",
   "static/css/1.2fe6a835.chunk.css": "/fast-question-game/static/css/1.2fe6a835.chunk.css",
   "static/js/1.3ed6d331.chunk.js": "/fast-question-game/static/js/1.3ed6d331.chunk.js",
   "static/js/1.3ed6d331.chunk.js.map": "/fast-question-game/static/js/1.3ed6d331.chunk.js.map",
@@ -10,6 +10,6 @@
   "static/css/1.2fe6a835.chunk.css.map": "/fast-question-game/static/css/1.2fe6a835.chunk.css.map",
   "static/css/main.b2d4063a.chunk.css.map": "/fast-question-game/static/css/main.b2d4063a.chunk.css.map",
   "index.html": "/fast-question-game/index.html",
-  "precache-manifest.77ecc7b10ae321237758eecc368ef189.js": "/fast-question-game/precache-manifest.77ecc7b10ae321237758eecc368ef189.js",
+  "precache-manifest.3dc677b4b746e5ba15cbf23ef4a8673d.js": "/fast-question-game/precache-manifest.3dc677b4b746e5ba15cbf23ef4a8673d.js",
   "service-worker.js": "/fast-question-game/service-worker.js"
 }
