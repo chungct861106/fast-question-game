@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useCookies } from "react-cookie";
-import React, { useContext, useState } from "react";
-import { useEffect } from "react/cjs/react.development";
+import React, { useContext, useState, useEffect } from "react";
 
 const UserInfoContext = React.createContext(null);
 
