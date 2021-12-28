@@ -9,8 +9,7 @@ function MyApp({ children }) {
   const [userInfo, setUser] = useState({});
   const [isLogin, setLoginStatus] = useState(false);
   const [cookies, setCookie, removeCookie] = useCookies(["userInfo"]);
-
-  useEffect(async () => {
+  const defaultLogin = async () => {
     if (cookies.userInfo && cookies.userInfo.user_token) {
       try {
         const response = await axios.get(
@@ -28,6 +27,9 @@ function MyApp({ children }) {
         removeCookie("userInfo");
       }
     }
+  };
+  useEffect(() => {
+    defaultLogin();
   }, []);
   const login = (userInfo) => {
     setUser(userInfo);
