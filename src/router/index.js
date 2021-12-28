@@ -4,6 +4,7 @@ import {
   Switch as Routes,
   Route,
   NavLink,
+  Redirect,
 } from "react-router-dom";
 import "antd/dist/antd.css";
 import { Layout, Menu, Spin } from "antd";
@@ -51,6 +52,9 @@ function GameRouter() {
       <Route exact path="/edit/:questionID">
         <EditQuestion />
       </Route>
+      <Route>
+        <Redirect to="/dashboard" />
+      </Route>
     </>
   );
 }
@@ -59,9 +63,9 @@ function MyRouter() {
 
   const handleLogout = () => {
     window.location.pathname = "/";
-    console.log(window.location);
     logout();
   };
+
   return (
     <Router>
       <Layout style={{ height: "100%" }}>
@@ -92,8 +96,8 @@ function MyRouter() {
 
         <Content className="center-vertical">
           <Routes>
-            {isLogin === false && <LoginRouter />}
-            {isLogin === true && <GameRouter />}
+            {!isLogin && <LoginRouter />}
+            {isLogin && <GameRouter />}
             <Route>
               <Spin />
             </Route>
