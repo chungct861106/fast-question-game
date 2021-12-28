@@ -11,7 +11,7 @@ function MyApp({ children }) {
   const [cookies, setCookie, removeCookie] = useCookies(["userInfo"]);
 
   useEffect(async () => {
-    if (cookies.userInfo.user_token) {
+    if (cookies.userInfo && cookies.userInfo.user_token) {
       try {
         const response = await axios.get(
           process.env.REACT_APP_BACKEND_HOST + "/user/checkToken",

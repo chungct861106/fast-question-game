@@ -4,10 +4,9 @@ import {
   Switch as Routes,
   Route,
   NavLink,
-  useHistory,
 } from "react-router-dom";
 import "antd/dist/antd.css";
-import { Layout, Menu } from "antd";
+import { Layout, Menu, Spin } from "antd";
 import LoginPage from "../page/login";
 import SignUpPage from "../page/signup";
 import { useUser } from "../context/user";
@@ -57,10 +56,11 @@ function GameRouter() {
 }
 function MyRouter() {
   const { isLogin, logout } = useUser();
-  const history = useHistory();
+
   const handleLogout = () => {
+    window.location.pathname = "/";
+    console.log(window.location);
     logout();
-    history.push("/");
   };
   return (
     <Router>
@@ -94,6 +94,9 @@ function MyRouter() {
           <Routes>
             {isLogin === false && <LoginRouter />}
             {isLogin === true && <GameRouter />}
+            <Route>
+              <Spin />
+            </Route>
           </Routes>
         </Content>
       </Layout>
