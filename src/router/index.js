@@ -86,9 +86,10 @@ function MyRouter() {
               <Menu.Item
                 key="4"
                 style={{ position: "absolute", right: 0, height: 58 }}
-                onClick={handleLogout}
               >
-                登出
+                <NavLink onClick={handleLogout} to="/">
+                  登出
+                </NavLink>
               </Menu.Item>
             </>
           )}
