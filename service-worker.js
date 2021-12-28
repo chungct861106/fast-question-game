@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/fast-question-game/precache-manifest.97e83b9cd511b75b68f36709a2b4bbb5.js"
+  "/fast-question-game/precache-manifest.feef555e644e3ffbabf8d4af47dfdae9.js"
 );
 
 workbox.clientsClaim();
