@@ -69,6 +69,10 @@ function SignUpPage() {
                 required: true,
                 message: "請輸入你的密碼",
               },
+              {
+                pattern: RegExp("^[a-zA-Z0-9]{3,30}$"),
+                message: "輸入數字或英文字母",
+              },
             ]}
             hasFeedback
           >
