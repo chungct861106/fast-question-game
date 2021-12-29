@@ -11,12 +11,12 @@ function Profile() {
   useEffect(() => {
     form.setFieldsValue(userInfo);
   }, []);
-  const handleSubmit = async (e) => {
-    const { username } = e;
+  const handleSubmit = async ({ username }) => {
     const response = await services.user.Update({ username });
     if (response.status === 200) {
       message.success("編輯成功");
-      login(e);
+      userInfo.username = username;
+      login(userInfo);
     }
   };
   return (
