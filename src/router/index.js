@@ -17,6 +17,7 @@ import EditQuestion from "../page/edit";
 import Review from "../page/review";
 import Verify from "../page/verify";
 import Remind from "../page/remider";
+import Profile from "../page/profile";
 const { Content } = Layout;
 
 function LoginRouter() {
@@ -40,6 +41,9 @@ function LoginRouter() {
 function GameRouter() {
   return (
     <>
+      <Route exact path="/profile">
+        <Profile />
+      </Route>
       <Route exact path="/dashboard">
         <Dashboard />
       </Route>
@@ -53,13 +57,13 @@ function GameRouter() {
         <EditQuestion />
       </Route>
       <Route>
-        <Redirect to="/dashboard" />
+        <Redirect to="/profile" />
       </Route>
     </>
   );
 }
 function MyRouter() {
-  const { isLogin, logout } = useUser();
+  const { isLogin, logout, userInfo } = useUser();
 
   const handleLogout = () => {
     window.location.pathname = "/";
@@ -71,8 +75,10 @@ function MyRouter() {
       <Layout style={{ height: "100%" }}>
         <Menu theme="dark" mode="horizontal">
           <Menu.Item key="1">
-            <NavLink to={isLogin ? "/dashboard" : "/"}>
-              <h1 style={{ color: "white" }}>SOLab</h1>
+            <NavLink to={isLogin ? "/profile" : "/"}>
+              <h1 style={{ color: "white" }}>
+                SOLab{isLogin && ": " + userInfo.username}
+              </h1>
             </NavLink>
           </Menu.Item>
           {isLogin && (

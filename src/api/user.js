@@ -21,6 +21,15 @@ User.prototype.Create = async function(params) {
     return err.response;
   }
 };
+User.prototype.Update = async function(params) {
+  try {
+    return await axios.post(this.server + "/user/update", params, {
+      headers: { Authorization: this.token },
+    });
+  } catch (err) {
+    return err.response;
+  }
+};
 
 User.prototype.Active = async function(token) {
   try {
