@@ -17,6 +17,7 @@ function Profile() {
       message.success("編輯成功");
       userInfo.username = username;
       login(userInfo);
+      setChanged(false);
     }
   };
   return (
