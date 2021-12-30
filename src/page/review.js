@@ -6,7 +6,7 @@ function Review() {
   const { services } = useService();
   const columns = [
     {
-      title: "使用者名稱",
+      title: "對象",
       dataIndex: "username",
       width: 150,
     },
@@ -18,6 +18,12 @@ function Review() {
         if (review.type === "QA") return review.title;
         else return `${review.title}: 1.${review.option1} 2.${review.option2}`;
       },
+    },
+    {
+      title: "題型",
+      width: 300,
+      dataIndex: "type",
+      render: (type) => (type === "QA" ? "快問快答" : "殘酷二選一"),
     },
     {
       title: "創建時間",

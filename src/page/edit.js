@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Form,
   Row,
@@ -11,7 +11,6 @@ import {
   message,
 } from "antd";
 import { useParams, useHistory, useLocation } from "react-router-dom";
-import { useState } from "react/cjs/react.development";
 import useService from "../api";
 
 function EditQuestion() {

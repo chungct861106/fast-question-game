@@ -47,6 +47,12 @@ function Dashboard() {
       dataIndex: "title",
     },
     {
+      title: "題型",
+      width: 300,
+      dataIndex: "type",
+      render: (type) => (type === "QA" ? "快問快答" : "殘酷二選一"),
+    },
+    {
       title: "創建時間",
       width: 180,
       render: ({ create_time }) => new Date(create_time).toLocaleString(),
